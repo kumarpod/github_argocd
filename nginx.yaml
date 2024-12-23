@@ -15,9 +15,8 @@ spec:
         app:  argocd
     spec:     
       containers:
-      - name:  argocd
-        image:  MYAPP:latest
+      - name: argocd
+        image: nginx:latest
         
         ports:
-        - containerPort:  80
-        
+        - containerPort: 80
