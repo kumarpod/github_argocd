@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  argocd
+  namespace: default
+  labels:
+    app:  argocd
+spec:
+  selector:
+    matchLabels:
+      app: argocd
+  template:
+    metadata:
+      labels:
+        app:  argocd
+    spec:     
+      containers:
+      - name:  argocd
+        image:  MYAPP:latest
+        
+        ports:
+        - containerPort:  80
+        
